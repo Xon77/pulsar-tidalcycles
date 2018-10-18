@@ -43,12 +43,17 @@ atom-text-editor.editor .line {
 }
 
 atom-panel div.tidalcycles.console {
-  height: 100px;
   padding: 3px 10px;
-  font-size: 14px;
-  overflow: scroll;
-  font-family: Consolas, monospace;
+  &.scroll{
+    height: 100px;
+    padding: 3px 10px;
+    overflow: scroll;
 
+  }
+  pre {
+    font-family: Consolas, monospace;
+    font-size: 14px;
+  }
   .error{
     color: @text-color-error;
   }
