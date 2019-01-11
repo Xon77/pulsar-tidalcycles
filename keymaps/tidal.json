@@ -5,6 +5,8 @@
         "cmd-enter": "tidalcycles:eval-multi-line",
         "ctrl-enter": "tidalcycles:eval-multi-line",
         "alt-cmd-enter": "tidalcycles:eval-multi-line-copy",
-        "shift-cmd-h": "tidalcycles:hush"
+        "alt-ctrl-enter": "tidalcycles:eval-multi-line-copy",
+        "shift-cmd-h": "tidalcycles:hush",
+        "shift-ctrl-h": "tidalcycles:hush"
     }
 }
