@@ -17,6 +17,8 @@ let unsolo = streamUnsolo tidal
 let once = streamOnce tidal False
 let asap = streamOnce tidal True
 let nudgeAll = streamNudgeAll tidal
+let all = streamAll tidal
+let resetCycles = streamResetCycles tidal
 let setcps = asap . cps
 let xfade i = transition tidal (Sound.Tidal.Transition.xfadeIn 4) i
 let xfadeIn i t = transition tidal (Sound.Tidal.Transition.xfadeIn t) i
@@ -34,7 +36,6 @@ let clutch i = transition tidal (Sound.Tidal.Transition.clutch) i
 let clutchIn i t = transition tidal (Sound.Tidal.Transition.clutchIn t) i
 let anticipate i = transition tidal (Sound.Tidal.Transition.anticipate) i
 let anticipateIn i t = transition tidal (Sound.Tidal.Transition.anticipateIn t) i
-
 let d1 = p 1
 let d2 = p 2
 let d3 = p 3
