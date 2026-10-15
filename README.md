@@ -1,5 +1,13 @@
 # TidalCycles plugin for Pulsar
 
+## About this fork
+
+Fork of [tidalcycles/pulsar-tidalcycles](https://github.com/tidalcycles/pulsar-tidalcycles) (v4.3.0), used with [Live 4 Bubbles](https://github.com/Xon77/Live4Bubbles). Three files are modified:
+
+- `lib/editors.js`: the evaluation highlight lasts 660 ms instead of 120 ms, to be more visible.
+- `lib/osc-eval.js`: OSC evaluation (`/pulsar/eval`) can target a pane (`pane`), a tab (`tab`) and a position (`row`/`column`, with `goTo` before evaluating), to drive split windows with one pane per track.
+- `lib/process.js`: if GHCi has not exited 1.5 s after `SIGTERM`, it is killed with `SIGKILL`. Before this change, quitting Pulsar could take a long time after a Tidal session.
+
 ![CI](https://github.com/tidalcycles/pulsar-tidalcycles/actions/workflows/ci.yml/badge.svg?branch=master)
 
 [TidalCycles](https://tidalcycles.org) is a language for live coding algorithmic patterns.
